@@ -23,8 +23,8 @@ Portfólio profissional responsivo desenvolvido com React, Vite e Tailwind CSS.
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seuusuario/nome-repositorio.git
-   cd nome-repositorio
+   git clone https://github.com/michellemarcondes/portfoliopedro.git
+   cd portfoliopedro
    ```
 
 2. Instale as dependências:
