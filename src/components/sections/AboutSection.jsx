@@ -19,7 +19,7 @@ const AboutSection = () => {
           <div className="order-2 lg:order-1">
             <div className="relative">
               <img 
-                src="/foto-sobre.jpg" 
+                src={`${import.meta.env.BASE_URL}foto-sobre.jpg`} 
                 alt="Pedro Henrique Lira" 
                 className="rounded-xl shadow-lg max-w-full h-auto"
               />

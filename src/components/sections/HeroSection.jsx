@@ -45,7 +45,7 @@ const HeroSection = () => {
           <div className="lg:w-1/2 relative z-10" data-aos="fade-left" data-aos-delay="400">
             <div className="relative animate-float animate-pulse-slow">
               <img 
-                src="/foto-hero.jpg" 
+                src={`${import.meta.env.BASE_URL}foto-hero.jpg`} 
                 alt="Pedro Henrique Lira" 
                 className="rounded-xl shadow-xl max-w-full h-auto"
               />

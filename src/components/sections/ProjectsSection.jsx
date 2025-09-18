@@ -13,17 +13,23 @@ const ProjectsSection = () => {
   const navigationPrevRef = useRef(null);
   const navigationNextRef = useRef(null);
   
+  // Função para obter o caminho correto das imagens no GitHub Pages
+  const getImagePath = (imageName) => {
+    // Usa o import.meta.env.BASE_URL para obter o caminho base configurado no vite.config.js
+    return `${import.meta.env.BASE_URL}${imageName}`;
+  };
+
   const projects = [
-    { id: 1, title: "Calculadora", image: "/CALCULADORA.png", description: "Aplicação de calculadora com interface intuitiva", tech: ["HTML", "CSS", "JavaScript"] },
-    { id: 2, title: "Acender LED", image: "/ACENDERLED.png", description: "Projeto de automação para controle de LED", tech: ["Arduino", "C++", "IoT"] },
-    { id: 3, title: "Ajuda ao Idoso", image: "/AJUDAIDOSOTELA.png", description: "Aplicativo de assistência para idosos", tech: ["React", "Node.js", "MongoDB"] },
-    { id: 4, title: "Catraca", image: "/CATRACA.png", description: "Sistema de controle de acesso com catraca eletrônica", tech: ["Python", "Raspberry Pi", "RFID"] },
-    { id: 5, title: "Clima", image: "/CLIMATELA.png", description: "Aplicação de previsão do tempo", tech: ["React", "API REST", "Tailwind CSS"] },
-    { id: 6, title: "Semáforo", image: "/SEMAFARO.png", description: "Sistema de controle de semáforo inteligente", tech: ["Arduino", "C++", "Sensores"] },
-    { id: 7, title: "Sensor", image: "/SENSOR.png", description: "Projeto com sensores IoT", tech: ["ESP8266", "MQTT", "Node.js"] },
-    { id: 8, title: "Média", image: "/média.png", description: "Calculadora de médias escolares", tech: ["HTML", "CSS", "JavaScript"] },
-    { id: 9, title: "Par ou Ímpar", image: "/par ou ímpar.png", description: "Jogo de par ou ímpar", tech: ["JavaScript", "HTML", "CSS"] },
-    { id: 10, title: "Primos", image: "/primos.png", description: "Verificador de números primos", tech: ["JavaScript", "HTML", "CSS"] }
+    { id: 1, title: "Calculadora", image: getImagePath("CALCULADORA.png"), description: "Aplicação de calculadora com interface intuitiva", tech: ["HTML", "CSS", "JavaScript"] },
+    { id: 2, title: "Acender LED", image: getImagePath("ACENDERLED.png"), description: "Projeto de automação para controle de LED", tech: ["Arduino", "C++", "IoT"] },
+    { id: 3, title: "Ajuda ao Idoso", image: getImagePath("AJUDAIDOSOTELA.png"), description: "Aplicativo de assistência para idosos", tech: ["React", "Node.js", "MongoDB"] },
+    { id: 4, title: "Catraca", image: getImagePath("CATRACA.png"), description: "Sistema de controle de acesso com catraca eletrônica", tech: ["Python", "Raspberry Pi", "RFID"] },
+    { id: 5, title: "Clima", image: getImagePath("CLIMATELA.png"), description: "Aplicação de previsão do tempo", tech: ["React", "API REST", "Tailwind CSS"] },
+    { id: 6, title: "Semáforo", image: getImagePath("SEMAFARO.png"), description: "Sistema de controle de semáforo inteligente", tech: ["Arduino", "C++", "Sensores"] },
+    { id: 7, title: "Sensor", image: getImagePath("SENSOR.png"), description: "Projeto com sensores IoT", tech: ["ESP8266", "MQTT", "Node.js"] },
+    { id: 8, title: "Média", image: getImagePath("média.png"), description: "Calculadora de médias escolares", tech: ["HTML", "CSS", "JavaScript"] },
+    { id: 9, title: "Par ou Ímpar", image: getImagePath("par ou ímpar.png"), description: "Jogo de par ou ímpar", tech: ["JavaScript", "HTML", "CSS"] },
+    { id: 10, title: "Primos", image: getImagePath("primos.png"), description: "Verificador de números primos", tech: ["JavaScript", "HTML", "CSS"] }
   ];
 
   const openModal = (project) => {

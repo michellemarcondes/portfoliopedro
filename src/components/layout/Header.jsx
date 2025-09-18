@@ -42,7 +42,7 @@ const Header = () => {
             <RiLinkedinBoxFill size={24} />
           </a>
           <a 
-            href="/curriculo.pdf" 
+            href={`${import.meta.env.BASE_URL}curriculo.pdf`} 
             download="Pedro_Henrique_Lira_CV.pdf"
             className="bg-primary hover:bg-secondary text-white px-4 py-2 rounded-md transition-colors duration-300 flex items-center"
           >
