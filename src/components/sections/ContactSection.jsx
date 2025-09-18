@@ -1,67 +1,126 @@
-import { FaInstagram, FaLinkedin, FaEnvelope, FaPhone } from 'react-icons/fa';
+import { RiMailLine, RiPhoneLine, RiInstagramLine, RiLinkedinBoxLine, RiGithubLine, RiSendPlaneLine } from 'react-icons/ri';
 
 const ContactSection = () => {
   return (
-    <section id="contato" className="py-16 bg-white">
+    <section id="contact" className="py-20 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Contato</h2>
+        <div className="flex flex-col items-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-text mb-4">Contato</h2>
+          <div className="w-24 h-1.5 bg-gradient-to-r from-primary to-accent rounded-full"></div>
+        </div>
         
-        <div className="flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2 mb-8 md:mb-0">
-            <img 
-              src="/contato.jpg" 
-              alt="Contato" 
-              className="rounded-lg shadow-lg max-w-full h-auto"
-              onError={(e) => {
-                e.target.onerror = null;
-                e.target.src = 'https://via.placeholder.com/600x400?text=Imagem+de+Contato';
-              }}
-            />
+        <div className="flex flex-col lg:flex-row items-center gap-12">
+          <div className="lg:w-1/2">
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <h3 className="text-2xl font-bold mb-6 text-text">Envie uma mensagem</h3>
+              
+              <form className="space-y-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-text mb-1">Nome</label>
+                    <input 
+                      type="text" 
+                      id="name" 
+                      className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
+                      placeholder="Seu nome"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-text mb-1">Email</label>
+                    <input 
+                      type="email" 
+                      id="email" 
+                      className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
+                      placeholder="seu.email@exemplo.com"
+                    />
+                  </div>
+                </div>
+                
+                <div>
+                  <label htmlFor="subject" className="block text-sm font-medium text-text mb-1">Assunto</label>
+                  <input 
+                    type="text" 
+                    id="subject" 
+                    className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
+                    placeholder="Assunto da mensagem"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-text mb-1">Mensagem</label>
+                  <textarea 
+                    id="message" 
+                    rows="4" 
+                    className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
+                    placeholder="Sua mensagem aqui..."
+                  ></textarea>
+                </div>
+                
+                <button 
+                  type="submit" 
+                  className="bg-primary hover:bg-secondary text-white px-6 py-3 rounded-lg transition-colors duration-300 flex items-center justify-center"
+                >
+                  <RiSendPlaneLine className="mr-2" size={20} />
+                  Enviar mensagem
+                </button>
+              </form>
+            </div>
           </div>
           
-          <div className="md:w-1/2 md:pl-12">
-            <div className="bg-gray-50 p-8 rounded-lg shadow-md">
-              <h3 className="text-2xl font-bold mb-6 text-gray-800">Vamos conversar!</h3>
+          <div className="lg:w-1/2">
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <h3 className="text-2xl font-bold mb-6 text-text">Informações de contato</h3>
               
-              <div className="space-y-4">
+              <div className="space-y-6">
                 <div className="flex items-center">
-                  <div className="bg-blue-100 p-3 rounded-full mr-4">
-                    <FaEnvelope className="text-blue-600" size={20} />
+                  <div className="bg-primary/10 p-3 rounded-full mr-4">
+                    <RiMailLine className="text-primary" size={24} />
                   </div>
                   <div>
                     <p className="text-sm text-gray-500">Email</p>
-                    <p className="text-gray-800 font-medium">pedro.lira@exemplo.com</p>
+                    <p className="text-text font-medium">pedro.lira@exemplo.com</p>
                   </div>
                 </div>
                 
                 <div className="flex items-center">
-                  <div className="bg-blue-100 p-3 rounded-full mr-4">
-                    <FaPhone className="text-blue-600" size={20} />
+                  <div className="bg-primary/10 p-3 rounded-full mr-4">
+                    <RiPhoneLine className="text-primary" size={24} />
                   </div>
                   <div>
                     <p className="text-sm text-gray-500">Telefone</p>
-                    <p className="text-gray-800 font-medium">(11) 98765-4321</p>
+                    <p className="text-text font-medium">(11) 98765-4321</p>
                   </div>
                 </div>
                 
-                <div className="pt-4">
-                  <p className="text-gray-700 mb-4">Conecte-se comigo nas redes sociais:</p>
+                <div>
+                  <p className="text-text mb-4">Conecte-se comigo nas redes sociais:</p>
                   <div className="flex space-x-4">
                     <a 
                       href="https://instagram.com" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition duration-300"
+                      className="bg-primary text-white p-3 rounded-full hover:bg-secondary transition-colors duration-300"
+                      aria-label="Instagram"
                     >
-                      <FaInstagram size={20} />
+                      <RiInstagramLine size={24} />
                     </a>
                     <a 
                       href="https://linkedin.com" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition duration-300"
+                      className="bg-primary text-white p-3 rounded-full hover:bg-secondary transition-colors duration-300"
+                      aria-label="LinkedIn"
                     >
-                      <FaLinkedin size={20} />
+                      <RiLinkedinBoxLine size={24} />
+                    </a>
+                    <a 
+                      href="https://github.com" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="bg-primary text-white p-3 rounded-full hover:bg-secondary transition-colors duration-300"
+                      aria-label="GitHub"
+                    >
+                      <RiGithubLine size={24} />
                     </a>
                   </div>
                 </div>

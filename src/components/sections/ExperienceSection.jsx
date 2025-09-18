@@ -1,4 +1,5 @@
 import React from 'react';
+import { RiBriefcaseLine, RiTimeLine, RiCheckboxCircleFill } from 'react-icons/ri';
 
 const ExperienceSection = () => {
   const experiences = [
@@ -26,29 +27,39 @@ const ExperienceSection = () => {
   ];
 
   return (
-    <section id="experiencia" className="py-16 bg-gray-50">
+    <section id="experience" className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Experiências Profissionais</h2>
+        <div className="flex flex-col items-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-text mb-4">Experiências Profissionais</h2>
+          <div className="w-24 h-1.5 bg-gradient-to-r from-primary to-accent rounded-full"></div>
+        </div>
         
         <div className="space-y-8">
           {experiences.map((exp, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-md transition-transform hover:scale-[1.02]">
-              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+            <div key={index} className="bg-background p-6 rounded-xl shadow-md transition-all duration-300 hover:shadow-lg border-l-4 border-primary">
+              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-6">
                 <div>
-                  <h3 className="text-xl font-bold text-gray-800">{exp.company}</h3>
-                  <p className="text-blue-600 font-medium">{exp.role}</p>
+                  <h3 className="text-xl font-bold text-text flex items-center">
+                    <RiBriefcaseLine className="text-primary mr-2" size={24} />
+                    {exp.company}
+                  </h3>
+                  <p className="text-primary font-medium mt-1">{exp.role}</p>
                 </div>
-                <span className="text-gray-500 mt-2 md:mt-0">{exp.period}</span>
+                <span className="text-text/70 mt-2 md:mt-0 flex items-center">
+                  <RiTimeLine className="mr-1" />
+                  {exp.period}
+                </span>
               </div>
               
-              <p className="text-gray-700 mb-4">{exp.description}</p>
+              <p className="text-text mb-6 leading-relaxed">{exp.description}</p>
               
               <div className="flex flex-wrap gap-2">
                 {exp.skills.map((skill, skillIndex) => (
                   <span 
                     key={skillIndex} 
-                    className="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full"
+                    className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full flex items-center"
                   >
+                    <RiCheckboxCircleFill className="mr-1" size={14} />
                     {skill}
                   </span>
                 ))}

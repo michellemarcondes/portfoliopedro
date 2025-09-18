@@ -10,17 +10,32 @@ export default {
         sans: ['Inter', 'system-ui', 'sans-serif'],
       },
       colors: {
-        blue: {
-          50: '#eff6ff',
-          100: '#dbeafe',
-          200: '#bfdbfe',
-          300: '#93c5fd',
-          400: '#60a5fa',
-          500: '#3b82f6',
-          600: '#2563eb',
-          700: '#1d4ed8',
-          800: '#1e40af',
-          900: '#1e3a8a',
+        primary: '#3B82F6',    // Azul profissional
+        secondary: '#1E40AF',  // Azul escuro para hover
+        accent: '#10B981',     // Verde para elementos secundários
+        background: '#F9FAFB', // Cinza claro para fundos
+        text: '#1F2937',       // Cinza escuro para texto
+      },
+      animation: {
+        'float': 'float 6s ease-in-out infinite',
+        'fade-in': 'fadeIn 0.5s ease-in-out',
+        'pulse-slow': 'pulse 3s ease-in-out infinite',
+        'bounce-slow': 'bounce 3s ease-in-out infinite',
+        'spin-slow': 'spin 6s linear infinite',
+        'slide-in': 'slideIn 0.5s ease-in-out',
+      },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+        fadeIn: {
+          '0%': { opacity: '0', transform: 'translateY(10px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        slideIn: {
+          '0%': { transform: 'translateX(-20px)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
         },
       },
     },
@@ -31,6 +46,13 @@ export default {
         sm: '2rem',
         lg: '4rem',
         xl: '5rem',
+      },
+      screens: {
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+        '2xl': '1536px',
       },
     },
   },
