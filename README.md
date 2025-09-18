@@ -1,11 +1,64 @@
-# React + Vite
+# Portfólio de Pedro Henrique Lira
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfólio profissional responsivo desenvolvido com React, Vite e Tailwind CSS.
 
-Currently, two official plugins are available:
+## Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Design responsivo para dispositivos móveis, tablets e desktops
+- Navegação suave entre seções
+- Carrosséis interativos para certificados e projetos
+- Modais para visualização detalhada
+- Otimizado para GitHub Pages
+
+## Tecnologias Utilizadas
+
+- React
+- Vite
+- Tailwind CSS
+- React Icons
+- Swiper (para carrosséis)
+- GitHub Pages (para hospedagem)
+
+## Instalação e Uso
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seuusuario/nome-repositorio.git
+   cd nome-repositorio
+   ```
+
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
+
+3. Execute o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+
+4. Para fazer o build e deploy no GitHub Pages:
+   ```bash
+   npm run deploy
+   ```
+
+## Estrutura do Projeto
+
+- `src/components/layout`: Componentes de layout (Header, Footer)
+- `src/components/sections`: Seções principais do portfólio
+- `public`: Imagens e arquivos estáticos
+
+## Personalização
+
+Para personalizar este portfólio:
+
+1. Substitua as imagens na pasta `public`
+2. Atualize as informações pessoais nos componentes
+3. Modifique as cores e estilos no arquivo `tailwind.config.js`
+
+## Licença
+
+MIT
 
 ## Expanding the ESLint configuration
 
