@@ -3,8 +3,8 @@ import { RiCheckboxCircleLine } from 'react-icons/ri';
 
 const AboutSection = () => {
   const skills = [
-    'HTML/CSS', 'JavaScript', 'React', 'Node.js', 
-    'Tailwind CSS', 'TypeScript', 'Git', 'Responsive Design'
+    'HTML/CSS', 'JavaScript', 'MIT APP Inventor', 'Arduino', 
+    'Linguagem C',
   ];
 
   return (
@@ -19,7 +19,7 @@ const AboutSection = () => {
           <div className="order-2 lg:order-1">
             <div className="relative">
               <img 
-                src={`${import.meta.env.BASE_URL}foto-sobre.jpg`} 
+                src={`fblogo.png`} 
                 alt="Pedro Henrique Lira" 
                 className="rounded-xl shadow-lg max-w-full h-auto"
               />
