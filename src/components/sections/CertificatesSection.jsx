@@ -13,11 +13,11 @@ const CertificatesSection = () => {
   const navigationNextRef = useRef(null);
   
   const certificates = [
-    { id: 1, title: "Certificado HTML", image: "/CERTIFICADO HTML.pdf", date: "Março 2023" },
-    { id: 2, title: "Certificado CSS", image: "/CERTIFICADO CSS.pdf", date: "Março 2023" },
-    { id: 3, title: "Certificado HTML, CSS e JS", image: "/CERTIFICADO HTML CSS E JS.pdf", date: "Março 2023" },
-    { id: 4, title: "Certificado Hora do Código", image: "/CERTIFICADO HORA DO CODIGO.pdf", date: "Abril 2023" },
-    { id: 5, title: "Certificado APICE", image: "/LSI-TEC APICE1 Certificado APICE.pdf", date: "Junho 2025" }
+    { id: 1, title: "Certificado HTML", image: "/portfoliopedro/htmlbasico.png", date: "Março 2023" },
+    { id: 2, title: "Certificado CSS", image: "/portfoliopedro/CertCSS.png", date: "Março 2023" },
+    { id: 3, title: "Certificado HTML, CSS e JS", image: "/portfoliopedro/certhtmlcssjs.png", date: "Março 2023" },
+    { id: 4, title: "Certificado Hora do Código", image: "/portfoliopedro/horacodigo.png", date: "Abril 2023" },
+    { id: 5, title: "Certificado APICE", image: "/portfoliopedro/apice.png", date: "Junho 2025" }
   ];
 
   const openModal = (certificate) => {
@@ -79,24 +79,22 @@ const CertificatesSection = () => {
           >
             {certificates.map((certificate) => (
               <SwiperSlide key={certificate.id}>
-                <div 
-                  className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:scale-[1.02] cursor-pointer"
+                <div
+                  className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:scale-[1.02] cursor-pointer aspect-video"
                   onClick={() => openModal(certificate)}
                 >
-                  <div className="bg-primary/10 p-4 flex items-center justify-between">
-                    <h3 className="text-lg font-semibold text-text flex items-center">
-                      <RiAwardLine className="text-primary mr-2" size={20} />
-                      {certificate.title}
-                    </h3>
-                    <span className="text-sm text-text/70">{certificate.date}</span>
-                  </div>
-                  <div className="p-4">
-                    <p className="text-text/80 mb-4">Clique para visualizar o certificado completo</p>
-                    <div className="flex justify-end">
-                      <button className="text-primary hover:text-secondary transition-colors duration-300 flex items-center">
-                        Ver certificado
-                        <RiArrowRightSLine className="ml-1" />
-                      </button>
+                  <div className="relative h-48 overflow-hidden">
+                    <img
+                      src={certificate.image}
+                      alt={certificate.title}
+                      className="w-full h-full object-contain transition-transform duration-500 hover:scale-110"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 p-4">
+                      <h3 className="text-text font-semibold flex items-center">
+                        <RiAwardLine className="text-primary mr-2" size={20} />
+                        {certificate.title}
+                      </h3>
+                      <span className="text-sm text-text/80">{certificate.date}</span>
                     </div>
                   </div>
                 </div>
@@ -122,8 +120,8 @@ const CertificatesSection = () => {
       {/* Modal */}
       {modalOpen && (
         <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4" onClick={closeModal}>
-          <div 
-            className="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-hidden relative animate-fade-in"
+          <div
+            className="bg-white rounded-xl max-w-5xl w-full max-h-[95vh] overflow-auto relative animate-fade-in"
             onClick={(e) => e.stopPropagation()}
           >
             <button 
@@ -133,18 +131,38 @@ const CertificatesSection = () => {
               <RiCloseLine size={24} />
             </button>
             
-            <div className="p-6">
-              <h3 className="text-2xl font-bold text-text mb-4 flex items-center">
-                <RiAwardLine className="text-primary mr-2" size={24} />
-                {currentCertificate.title}
-              </h3>
-              
-              <div className="bg-background rounded-lg p-4 mb-4">
-                <p className="text-text/80">Data de emissão: {currentCertificate.date}</p>
+            <div className="p-0">
+              <div className="relative h-[500px] md:h-[700px]">
+                <img
+                  src={currentCertificate.image}
+                  alt={currentCertificate.title}
+                  className="w-full h-full object-contain"
+                />
+                <div className="absolute inset-0 flex items-end">
+                  <div className="p-6">
+                    <h3 className="text-2xl font-bold text-text mb-2 flex items-center">
+                      <RiAwardLine className="text-primary mr-2" size={24} />
+                      {currentCertificate.title}
+                    </h3>
+                  </div>
+                </div>
               </div>
-              
-              <div className="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
-                <p className="text-text/70">Visualização do certificado: {currentCertificate.image}</p>
+
+              <div className="p-6">
+                <div className="mb-6">
+                  <p className="text-text/80">Data de emissão: {currentCertificate.date}</p>
+                </div>
+
+                <div className="flex justify-center">
+                  <a
+                    href={currentCertificate.image}
+                    download
+                    className="text-primary hover:text-secondary transition-colors duration-300 flex items-center"
+                  >
+                    Baixar certificado
+                    <RiArrowRightSLine className="ml-1" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>

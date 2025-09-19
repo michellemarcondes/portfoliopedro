@@ -28,7 +28,6 @@ const Header = () => {
         <nav className="hidden md:flex items-center space-x-8">
           <a href="#home" className="text-text hover:text-primary transition-colors duration-300 font-medium">Início</a>
           <a href="#about" className="text-text hover:text-primary transition-colors duration-300 font-medium">Sobre</a>
-          <a href="#experience" className="text-text hover:text-primary transition-colors duration-300 font-medium">Experiência</a>
           <a href="#certificates" className="text-text hover:text-primary transition-colors duration-300 font-medium">Certificados</a>
           <a href="#projects" className="text-text hover:text-primary transition-colors duration-300 font-medium">Projetos</a>
           <a href="#contact" className="text-text hover:text-primary transition-colors duration-300 font-medium">Contato</a>
@@ -74,7 +73,6 @@ const Header = () => {
           <nav className="flex flex-col space-y-6 text-lg">
             <a href="#home" className="text-text hover:text-primary transition-colors duration-300" onClick={toggleMenu}>Início</a>
             <a href="#about" className="text-text hover:text-primary transition-colors duration-300" onClick={toggleMenu}>Sobre</a>
-            <a href="#experience" className="text-text hover:text-primary transition-colors duration-300" onClick={toggleMenu}>Experiência</a>
             <a href="#certificates" className="text-text hover:text-primary transition-colors duration-300" onClick={toggleMenu}>Certificados</a>
             <a href="#projects" className="text-text hover:text-primary transition-colors duration-300" onClick={toggleMenu}>Projetos</a>
             <a href="#contact" className="text-text hover:text-primary transition-colors duration-300" onClick={toggleMenu}>Contato</a>
@@ -103,7 +101,6 @@ const Header = () => {
             <nav className="flex flex-col space-y-3">
               <a href="#inicio" className="text-gray-800 hover:text-blue-600 font-medium" onClick={toggleMenu}>Início</a>
               <a href="#sobre" className="text-gray-800 hover:text-blue-600 font-medium" onClick={toggleMenu}>Sobre</a>
-              <a href="#experiencia" className="text-gray-800 hover:text-blue-600 font-medium" onClick={toggleMenu}>Experiência</a>
               <a href="#certificados" className="text-gray-800 hover:text-blue-600 font-medium" onClick={toggleMenu}>Certificados</a>
               <a href="#projetos" className="text-gray-800 hover:text-blue-600 font-medium" onClick={toggleMenu}>Projetos</a>
               <a href="#contato" className="text-gray-800 hover:text-blue-600 font-medium" onClick={toggleMenu}>Contato</a>

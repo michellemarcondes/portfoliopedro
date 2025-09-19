@@ -18,7 +18,7 @@ const HeroSection = () => {
             Pedro Henrique Lira
           </h1>
           <h2 className="text-xl md:text-2xl font-medium text-primary mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            Desenvolvedor Web & Especialista em Tecnologia
+            Estudante de Tecnologia e Marketing Digital
           </h2>
           <p className="text-text text-lg mb-10 max-w-2xl leading-relaxed animate-fade-in" style={{ animationDelay: '0.4s' }}>
             Transformando ideias em soluções digitais inovadoras. Especializado em desenvolvimento web

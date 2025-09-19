@@ -19,7 +19,7 @@ const AboutSection = () => {
           <div className="order-2 lg:order-1">
             <div className="relative">
               <img 
-                src={`fblogo.png`} 
+                src={`logofb.png`} 
                 alt="Pedro Henrique Lira" 
                 className="rounded-xl shadow-lg max-w-full h-auto"
               />
@@ -29,15 +29,21 @@ const AboutSection = () => {
           
           <div className="order-1 lg:order-2">
             <p className="text-text text-lg mb-4 leading-relaxed">
-              Olá! Sou Pedro Henrique Lira, um desenvolvedor web apaixonado por criar soluções digitais inovadoras e funcionais. Com experiência em diversas tecnologias web modernas, busco sempre entregar projetos que combinam excelência técnica com uma experiência de usuário excepcional.
+              Sou Pedro Lira, estudante de Campinas apaixonado por tecnologia e marketing digital. Desde cedo aprendi sobre organização e responsabilidade como jovem aprendiz em almoxarifado, e hoje sigo construindo minha trajetória como futuro profissional da área.
+
+            </p>
+            <p className="text-text text-lg mb-4 leading-relaxed">
+            Minha formação na Fundação Bradesco tem sido fundamental para desenvolver projetos práticos, como a criação de um Snake Game no MIT App Inventor e um sistema de cancela automática com Arduino. Essas experiências reforçaram meu raciocínio lógico, minha criatividade e o trabalho em equipe.              
+            
             </p>
             
             <p className="text-text text-lg mb-4 leading-relaxed">
-              Minha jornada na programação começou há mais de 5 anos, quando descobri o poder de transformar ideias em realidade através do código. Desde então, venho aprimorando minhas habilidades em HTML, CSS, JavaScript, React e outras tecnologias front-end e back-end.
+            Tenho conhecimentos em Excel, HTML, CSS, JavaScript e C#, além de experiência com funil de vendas orgânico, o que me permite unir tecnologia e estratégias digitais de forma versátil e inovadora. Meu diferencial está na proatividade e na capacidade de aprender e me adaptar rapidamente a novos desafios.
+            
             </p>
             
             <p className="text-text text-lg mb-4 leading-relaxed">
-              Acredito que o desenvolvimento web vai além de simplesmente escrever código. Trata-se de resolver problemas reais, criar experiências memoráveis e impactar positivamente a vida das pessoas através da tecnologia.
+            Meus objetivos são claros: no curto prazo, aprofundar minha especialização em programação e marketing digital; no longo prazo, consolidar-me como um profissional de referência, criando soluções que unam tecnologia e estratégia. Fora dos estudos, gosto de jogar, estar com minha namorada e amigos e explorar novos conhecimentos.
             </p>
             
             <div className="mt-8">
