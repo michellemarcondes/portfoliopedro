@@ -13,11 +13,11 @@ const CertificatesSection = () => {
   const navigationNextRef = useRef(null);
   
   const certificates = [
-    { id: 1, title: "Certificado HTML", image: "/CERTIFICADO HTML.pdf", date: "Dezembro 2022" },
-    { id: 2, title: "Certificado CSS", image: "/CERTIFICADO CSS.pdf", date: "Janeiro 2023" },
+    { id: 1, title: "Certificado HTML", image: "/CERTIFICADO HTML.pdf", date: "Março 2023" },
+    { id: 2, title: "Certificado CSS", image: "/CERTIFICADO CSS.pdf", date: "Março 2023" },
     { id: 3, title: "Certificado HTML, CSS e JS", image: "/CERTIFICADO HTML CSS E JS.pdf", date: "Março 2023" },
     { id: 4, title: "Certificado Hora do Código", image: "/CERTIFICADO HORA DO CODIGO.pdf", date: "Abril 2023" },
-    { id: 5, title: "Certificado APICE", image: "/LSI-TEC APICE1 Certificado APICE.pdf", date: "Junho 2023" }
+    { id: 5, title: "Certificado APICE", image: "/LSI-TEC APICE1 Certificado APICE.pdf", date: "Junho 2025" }
   ];
 
   const openModal = (certificate) => {
